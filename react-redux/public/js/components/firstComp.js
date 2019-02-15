@@ -1,4 +1,4 @@
-webpackJsonp([1],{
+webpackJsonp([0],{
 
 /***/ 233:
 /***/ (function(module, exports, __webpack_require__) {
@@ -22,87 +22,70 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } //imports the react library
+
+
+//imports renderer
 
 var Layout = function (_Component) {
   _inherits(Layout, _Component);
 
+  //allows sharing of all the component methods
   function Layout() {
     _classCallCheck(this, Layout);
 
-    var _this = _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).call(this));
+    var _this = _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).call(this)); //the constructor is the first method that runs automatically when this component shows up
 
-    _this.clickedBtn = function () {
-      console.log('swag');
-    };
 
     _this.state = {
-      name: 'Joe'
+      name: 'Joe',
+      health: 55,
+      level: 1,
+      lowLevelClass: 'danger-red'
     };
+    _this.clickedGirl = _this.clickedGirl.bind(_this);
     return _this;
   }
 
   _createClass(Layout, [{
+    key: 'clickedGirl',
+    value: function clickedGirl() {
+      this.setState({
+        health: this.state.health - 25
+      }, function () {
+        console.log('Hey I CLICKED THE GIRL HER HEALTH IS NOW ' + this.state.health);
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
+      //render is a method that renders the jsx to the page
       return _react2.default.createElement(
         'div',
-        { className: 'home' },
+        { id: 'parent' },
         _react2.default.createElement(
           'div',
-          { className: 'Aligner' },
+          { className: 'blue-bg ' + (this.state.health < 55 ? this.state.lowLevelClass : '') },
           _react2.default.createElement(
-            'div',
-            { className: 'Aligner-item' },
-            _react2.default.createElement('img', { src: '/img/logo.png' }),
-            _react2.default.createElement(
-              'h1',
-              null,
-              'Starter-Kit-2k18'
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'menu' },
-              _react2.default.createElement(
-                'ul',
-                null,
-                _react2.default.createElement(
-                  'div',
-                  { onClick: this.clickedBtn },
-                  'clickked this'
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'a',
-                    { href: 'http://starterkit.codingphase.com', target: 'new' },
-                    'Documentation'
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  _react2.default.createElement(
-                    'a',
-                    { href: 'http://www.codingphase.com', target: 'new' },
-                    'CodingPhase.Com'
-                  )
-                )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'version-num' },
-              'version 2.0.18'
-            ),
-            _react2.default.createElement('br', null),
-            _react2.default.createElement(
-              'a',
-              { className: 'github-button', href: 'https://github.com/codingphasedotcom/Starter-Kit-2018', 'data-icon': 'octicon-star', 'data-style': 'mega', 'data-count-href': '/codingphasedotcom/rocky/stargazers', 'data-count-api': '/repos/codingphasedotcom/rocky#stargazers_count', 'data-count-aria-label': '# stargazers on GitHub', 'aria-label': 'Star codingphasedotcom/rocky on GitHub' },
-              'Star'
-            )
-          )
+            'h3',
+            null,
+            'Name: ',
+            this.state.name
+          ),
+          _react2.default.createElement(
+            'h3',
+            null,
+            'Health: ',
+            this.state.health
+          ),
+          _react2.default.createElement(
+            'h3',
+            null,
+            'level: ',
+            this.state.level
+          ),
+          _react2.default.createElement('img', { src: '/img/bape.png', alt: 'girl with bape',
+            onClick: this.clickedGirl })
         )
       );
     }
@@ -110,6 +93,54 @@ var Layout = function (_Component) {
 
   return Layout;
 }(_react.Component);
+
+var GirlImage = function (_Component2) {
+  _inherits(GirlImage, _Component2);
+
+  function GirlImage() {
+    _classCallCheck(this, GirlImage);
+
+    var _this2 = _possibleConstructorReturn(this, (GirlImage.__proto__ || Object.getPrototypeOf(GirlImage)).call(this));
+
+    _this2.state = {};
+    return _this2;
+  }
+
+  _createClass(GirlImage, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', null);
+    }
+  }]);
+
+  return GirlImage;
+}(_react.Component);
+
+var Header = function Header() {
+  return _react2.default.createElement(
+    'header',
+    null,
+    _react2.default.createElement(
+      'ul',
+      null,
+      _react2.default.createElement(
+        'li',
+        null,
+        'Home'
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        'About'
+      ),
+      _react2.default.createElement(
+        'li',
+        null,
+        'Contact'
+      )
+    )
+  );
+};
 
 var app = document.getElementById('app');
 

@@ -1,38 +1,61 @@
-import React, { Component} from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component} from 'react'  //imports the react library
+import ReactDOM from 'react-dom' //imports renderer
 
-class Layout extends Component {
+class Layout extends Component { //allows sharing of all the component methods
+  constructor () {      //the constructor is the first method that runs automatically when this component shows up
+    super()
+    this.state = {
+      name: 'Joe',
+      health: 55,
+      level: 1,
+      lowLevelClass: 'danger-red'
+    }
+    this.clickedGirl = this.clickedGirl.bind(this)
+  } 
+
+  clickedGirl(){
+    this.setState({
+      health: this.state.health - 25
+    }, function() {
+      console.log('Hey I CLICKED THE GIRL HER HEALTH IS NOW ' +
+      this.state.health)    
+    })
+  }
+  
+  render () {       //render is a method that renders the jsx to the page
+    return (<div id={'parent'}>
+    <div className={`blue-bg ${(this.state.health < 55) ?
+    this.state.lowLevelClass : ''}`}>      
+        <h3>Name: {this.state.name}</h3>
+        <h3>Health: {this.state.health}</h3>
+        <h3>level: {this.state.level}</h3>
+        <img src="/img/bape.png" alt={'girl with bape'}
+        onClick={this.clickedGirl}/>
+      </div>
+    </div>)
+  }
+}
+
+class GirlImage extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Joe'
+
     }
   }
-  clickedBtn = () => {
-    console.log('swag')
-  }
   render () {
-    return (<div className='home'>
-        <div className='Aligner'>
-          <div className='Aligner-item'>
-            <img src='/img/logo.png' />
-            <h1>Starter-Kit-2k18</h1>
-            <div className='menu'>
-              <ul>
-                <div onClick={this.clickedBtn}>clickked this</div>
-                <li><a href='http://starterkit.codingphase.com' target='new'>Documentation</a></li>
-                <li><a href='http://www.codingphase.com' target='new'>CodingPhase.Com</a></li>
-              </ul>
-            </div>
-            <div className='version-num'>
-              version 2.0.18
-            </div>
-            <br />
-            <a className='github-button' href='https://github.com/codingphasedotcom/Starter-Kit-2018' data-icon='octicon-star' data-style='mega' data-count-href='/codingphasedotcom/rocky/stargazers' data-count-api='/repos/codingphasedotcom/rocky#stargazers_count' data-count-aria-label='# stargazers on GitHub' aria-label='Star codingphasedotcom/rocky on GitHub'>Star</a>
-          </div>
-        </div>
-      </div>)
+    return (<div></div>)
   }
+}
+
+var Header = function() {
+  return (<header>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </header>)
 }
 
 const app = document.getElementById('app')
