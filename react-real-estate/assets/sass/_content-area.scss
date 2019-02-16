@@ -25,7 +25,7 @@
 
     select {
         background: transparent;
-        padding: 10px;
+        padding: 1px;
         font-size: 14px;
         font-weight: 500;
         color: #1b1b1b;
@@ -102,9 +102,10 @@
             select {
                 font-size: .9rem;
                 font-weight: 300;
+                
                 border: 1px solid $lightgrey;
                 background: transparent;
-                padding: 20px;
+                padding: 0px;
                 display: inline-block;
                 margin-right: 15px;
                 vertical-align: top;
@@ -163,10 +164,13 @@
             }
 
             .address {
+                font-size: 1.3rem;
+                text-transform: capitalize;
                 position: absolute;
                 bottom: 20px;
                 opacity: 1;
                 transition: all 0.4s ease-in-out;
+                text-shadow: 0 1px 4px rgba(91, 91, 91, 1);
             }
 
             .details {
@@ -196,7 +200,7 @@
                     border-radius: 50%;
                     border: 2px solid white;
                     display: inline-block;
-                    background: url("https://www.luxuryhomesoflasvegas.com/WP/wp-content/uploads/2018/09/The-Ridges-Luxury-Home-Market-Update.jpg") no-repeat center center;
+                    background: url("https://hottub.net/wp-content/uploads/2018/10/Real-Estate-Agent.jpg") no-repeat center center;
                     -webkit-background-size: cover;
                     -moz-background-size: cover;
                     -i-background-size: cover;
