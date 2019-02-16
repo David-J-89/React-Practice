@@ -9,7 +9,7 @@ const VENDOR_LIBS = [
 module.exports = {
   entry: {
     realEstate: './assets/js/realEstate/realEstate.js',
-    //@ts-checkregularJS: './assets/js/regularJS.js',
+    //regularJS: './assets/js/regularJS.js',
     vendor: VENDOR_LIBS
   },
   output: { filename: '[name].js',
