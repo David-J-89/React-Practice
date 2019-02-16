@@ -31,6 +31,7 @@ export default class Header extends Component {
       </section>
 
       <section className="listings-results">
+      <div className="col-md-3">
         <div className="listing">
           <div className="listing-img">
             <span className="address">23 Dexi hills</span>
@@ -61,17 +62,17 @@ export default class Header extends Component {
             </div>
           </div>
           <div className="bottom-info">
-            <span>$1000 / month </span>
-            <span><i className="fa fa-map-marker" aria-hidden="true"></i> Ridgewood, NY</span>
+            <span className="price">$1000 / month </span>
+            <span className="location"><i className="fa fa-map-marker" aria-hidden="true"></i> Ridgewood, NY</span>
           </div>
         </div>
-
+        </div>
       </section>
 
-      <section className="pagination">
-        <ul className="pagination-nums">
+      <section id="pagination">
+        <ul className="pages">
           <li>Prev</li>
-          <li>1</li>
+          <li className="active">1</li>
           <li>2</li>
           <li>3</li>
           <li>4</li>

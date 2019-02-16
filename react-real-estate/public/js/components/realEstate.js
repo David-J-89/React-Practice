@@ -333,99 +333,103 @@ var Header = function (_Component) {
           { className: 'listings-results' },
           _react2.default.createElement(
             'div',
-            { className: 'listing' },
+            { className: 'col-md-3' },
             _react2.default.createElement(
               'div',
-              { className: 'listing-img' },
-              _react2.default.createElement(
-                'span',
-                { className: 'address' },
-                '23 Dexi hills'
-              ),
+              { className: 'listing' },
               _react2.default.createElement(
                 'div',
-                { className: 'details' },
+                { className: 'listing-img' },
                 _react2.default.createElement(
-                  'div',
-                  { className: 'col-md-3' },
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'user-img' },
-                    ' '
-                  )
+                  'span',
+                  { className: 'address' },
+                  '23 Dexi hills'
                 ),
                 _react2.default.createElement(
                   'div',
-                  { className: 'col-md-9' },
+                  { className: 'details' },
                   _react2.default.createElement(
                     'div',
-                    { className: 'user-details' },
+                    { className: 'col-md-3' },
                     _react2.default.createElement(
-                      'span',
-                      { className: 'user-name' },
-                      'Nina Smith'
-                    ),
-                    _react2.default.createElement(
-                      'span',
-                      { className: 'post-date' },
-                      '05/05/2018'
+                      'div',
+                      { className: 'user-img' },
+                      ' '
                     )
                   ),
                   _react2.default.createElement(
                     'div',
-                    { className: 'listing-details' },
+                    { className: 'col-md-9' },
                     _react2.default.createElement(
                       'div',
-                      { className: 'floor-space' },
-                      _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                      { className: 'user-details' },
                       _react2.default.createElement(
                         'span',
-                        null,
-                        '1000 ft\xB2'
+                        { className: 'user-name' },
+                        'Nina Smith'
+                      ),
+                      _react2.default.createElement(
+                        'span',
+                        { className: 'post-date' },
+                        '05/05/2018'
                       )
                     ),
                     _react2.default.createElement(
                       'div',
-                      { className: 'bedrooms' },
-                      _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                      { className: 'listing-details' },
                       _react2.default.createElement(
-                        'span',
-                        null,
-                        '3 bedrooms'
+                        'div',
+                        { className: 'floor-space' },
+                        _react2.default.createElement('i', { className: 'fa fa-square-o', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '1000 ft\xB2'
+                        )
+                      ),
+                      _react2.default.createElement(
+                        'div',
+                        { className: 'bedrooms' },
+                        _react2.default.createElement('i', { className: 'fa fa-bed', 'aria-hidden': 'true' }),
+                        _react2.default.createElement(
+                          'span',
+                          null,
+                          '3 bedrooms'
+                        )
                       )
+                    ),
+                    _react2.default.createElement(
+                      'div',
+                      { className: 'view-btn' },
+                      'View Listing'
                     )
-                  ),
-                  _react2.default.createElement(
-                    'div',
-                    { className: 'view-btn' },
-                    'View Listing'
                   )
                 )
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'bottom-info' },
-              _react2.default.createElement(
-                'span',
-                null,
-                '$1000 / month '
               ),
               _react2.default.createElement(
-                'span',
-                null,
-                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
-                ' Ridgewood, NY'
+                'div',
+                { className: 'bottom-info' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'price' },
+                  '$1000 / month '
+                ),
+                _react2.default.createElement(
+                  'span',
+                  { className: 'location' },
+                  _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+                  ' Ridgewood, NY'
+                )
               )
             )
           )
         ),
         _react2.default.createElement(
           'section',
-          { className: 'pagination' },
+          { id: 'pagination' },
           _react2.default.createElement(
             'ul',
-            { className: 'pagination-nums' },
+            { className: 'pages' },
             _react2.default.createElement(
               'li',
               null,
@@ -433,7 +437,7 @@ var Header = function (_Component) {
             ),
             _react2.default.createElement(
               'li',
-              null,
+              { className: 'active' },
               '1'
             ),
             _react2.default.createElement(
@@ -474,7 +478,102 @@ exports.default = Header;
 
 /***/ }),
 
-/***/ 236:
+/***/ 233:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+var listingsData = [{
+    address: '20-34 grand ave',
+    city: 'Ridgewood',
+    state: 'NY',
+    rooms: 3,
+    price: 220000,
+    floorSpace: 2000,
+    extras: ['elevator', 'gym'],
+    homeType: 'Apartment',
+    image: 'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ixPdSl7.SV8A/v1/2000x-1.jpg'
+}, {
+    address: '20-34 grand ave',
+    city: 'Miami',
+    state: 'FL',
+    rooms: 5,
+    price: 620000,
+    floorSpace: 2000,
+    extras: ['elevator', 'gym'],
+    homeType: 'Apartment',
+    image: 'http://www.cyaninternationalproperties.co.uk/wp-content/uploads/2015/06/2-Bedroom-Apartments-La-Laguna007.jpg'
+}, {
+    address: '20-34 grand ave',
+    city: 'Houston',
+    state: 'TX',
+    rooms: 3,
+    price: 320000,
+    floorSpace: 2000,
+    extras: ['elevator', 'gym'],
+    homeType: 'Apartment',
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Bryson_Apartment_Hotel%2C_Los_Angeles.JPG/1200px-Bryson_Apartment_Hotel%2C_Los_Angeles.JPG'
+}, {
+    address: '20-34 grand ave',
+    city: 'Dallas',
+    state: 'TX',
+    rooms: 2,
+    price: 420000,
+    floorSpace: 2000,
+    extras: ['elevator', 'gym'],
+    homeType: 'Apartment',
+    image: 'http://ww1.prweb.com/prfiles/2007/05/30/529869/DSCF0306.JPG'
+}, {
+    address: '20-34 grand ave',
+    city: 'Portland',
+    state: 'OR',
+    rooms: 4,
+    price: 120000,
+    floorSpace: 2000,
+    extras: ['elevator', 'gym'],
+    homeType: 'Apartment',
+    image: 'https://elizabethgatlin.com/wp-content/uploads/2012/12/Apartments-Nashville-Nance-Place.jpg'
+}, {
+    address: '20-34 grand ave',
+    city: 'Austin',
+    state: 'Tx',
+    rooms: 3,
+    price: 220000,
+    floorSpace: 2000,
+    extras: ['elevator', 'gym'],
+    homeType: 'Apartment',
+    image: 'https://www-redrow-co-uk.azureedge.net/-/media/redrow-london/images/developments/morello-croydon/gallery/resized-1164x848-images/morello-exterior.jpg'
+}, {
+    address: '20-34 grand ave',
+    city: 'Los Angeles',
+    state: 'CA',
+    rooms: 3,
+    price: 220000,
+    floorSpace: 2000,
+    extras: ['elevator', 'gym'],
+    homeType: 'Apartment',
+    image: 'http://www.trimarkproperties.com/gainesville/tuscana/luxury-apartments/mobile-gallery/d-tuscana-exterior-night.jpg'
+}, {
+    address: '20-34 grand ave',
+    city: 'Orlando',
+    state: 'FL',
+    rooms: 3,
+    price: 220000,
+    floorSpace: 2000,
+    extras: ['elevator', 'gym'],
+    homeType: 'Apartment',
+    image: 'https://backwoodshousewife.com/wp-content/uploads/2017/08/House-Rental-Agencies-Near-Me.jpg'
+}];
+
+exports.default = listingsData;
+
+/***/ }),
+
+/***/ 237:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -502,6 +601,10 @@ var _Listings = __webpack_require__(232);
 
 var _Listings2 = _interopRequireDefault(_Listings);
 
+var _listingsData = __webpack_require__(233);
+
+var _listingsData2 = _interopRequireDefault(_listingsData);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -523,7 +626,8 @@ var App = function (_Component) {
     };
 
     _this.state = {
-      name: 'Joe'
+      name: 'Joe',
+      listingsData: _listingsData2.default
     };
     return _this;
   }
@@ -554,4 +658,4 @@ _reactDom2.default.render(_react2.default.createElement(App, null), app);
 
 /***/ })
 
-},[236]);
+},[237]);

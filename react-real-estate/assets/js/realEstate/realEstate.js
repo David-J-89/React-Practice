@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom'
 import Header from './Header.js'
 import Filter from './Filter.js'
 import Listings from './Listings.js'
+import listingsData from './data/listingsData.js'
 
 class App extends Component {
   constructor () {
     super()
     this.state = {
-      name: 'Joe'
+      name: 'Joe',
+      listingsData //putting in the listsings data as our state
     }
   }
   clickedBtn = () => {
