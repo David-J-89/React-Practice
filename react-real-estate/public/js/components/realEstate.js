@@ -289,7 +289,7 @@ var Header = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         'section',
-        { className: 'listings' },
+        { id: 'listings' },
         _react2.default.createElement(
           'section',
           { className: 'search-area' },
@@ -300,7 +300,7 @@ var Header = function (_Component) {
           { className: 'sortby-area' },
           _react2.default.createElement(
             'div',
-            null,
+            { className: 'results' },
             ' 390 results found'
           ),
           _react2.default.createElement(
@@ -401,7 +401,8 @@ var Header = function (_Component) {
               _react2.default.createElement(
                 'span',
                 null,
-                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' })
+                _react2.default.createElement('i', { className: 'fa fa-map-marker', 'aria-hidden': 'true' }),
+                ' Ridgewood, NY'
               )
             )
           )
