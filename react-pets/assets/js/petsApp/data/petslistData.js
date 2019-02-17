@@ -80,7 +80,7 @@ var petslistData = [
         
         petRequirements: [
             'Water',
-            'Heat'
+            'Heat',
             'Iguana Food'
         ],        
         image:
@@ -109,7 +109,7 @@ var petslistData = [
         petSize: 'Medium',
         petColor: 'Black/Grey',
         petSex: 'Male',
-        petPrice: '65.00'
+        petPrice: '65.00',
         
         petRequirements: [
             'Water',
@@ -126,7 +126,7 @@ var petslistData = [
         petSize: 'small',
         petColor: 'blue',
         petSex: 'Female',
-        petPrice: 92.00
+        petPrice: 92.00,
         
         petRequirements: [
             'Water',
