@@ -121,10 +121,10 @@ var petslistData = [
     },
     {
         petType: 'Cat',
-        petBreed: '',
+        petBreed: 'Korat',
         petName: 'Lucy',
-        petSize: 'small',
-        petColor: 'blue',
+        petSize: 'Small',
+        petColor: 'Blue',
         petSex: 'Female',
         petPrice: 92.00,
         
@@ -135,7 +135,7 @@ var petslistData = [
         ],        
         image:
         'http://1.bp.blogspot.com/-N7FFMnsQTwM/UJ86C9tjwNI/AAAAAAAABMs/RVUSPMds4Vo/s1600/Korat_Cat_Picture.jpg'
-    },
+    }
     
     
     
