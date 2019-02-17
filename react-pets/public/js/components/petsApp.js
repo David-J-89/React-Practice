@@ -178,7 +178,7 @@ var App = function (_Component) {
         var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 
         _this.state = {
-            petslistData: petslistData
+            petslistData: _petslistData2.default
         };
 
         _this.change = _this.change.bind(_this);

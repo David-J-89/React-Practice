@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Header from './Header.js'
 import Filter from './Filter.js'
 import Listings from './petsList.js'
-import listingsData from './data/petslistData.js'
+import petslistData from './data/petslistData.js'
 
 class App extends Component {
     constructor () {
